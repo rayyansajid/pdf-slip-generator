@@ -11,7 +11,7 @@
     <h1 class="text-2xl font-bold text-center mb-4">Burger Corp. - Order Slip Generator</h1>
 
     <div class="bg-white p-6 shadow-md rounded-lg">
-      <table class="table-auto w-full mb-4">
+            <table class="table-auto w-full mb-4">
         <thead>
           <tr class="bg-gray-200">
             <th class="px-4 py-2">Item</th>
@@ -20,6 +20,9 @@
           </tr>
         </thead>
         <tbody id="itemsTable">
+          <tr>
+            <td class="border px-4 py-2" colspan="3" style="text-align: center; font-weight: bold;">Signature Burgs</td>
+          </tr>
           <tr>
             <td class="border px-4 py-2">Double Story Cheese</td>
             <td class="border px-4 py-2">499</td>
@@ -33,6 +36,35 @@
             <td class="border px-4 py-2">
               <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
             </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2" colspan="3" style="text-align: center; font-weight: bold;">Premium Burgs</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Big Bang Theory</td>
+            <td class="border px-4 py-2">549</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="border px-4 py-2">Creamy Classico</td>
+            <td class="border px-4 py-2">549</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="border px-4 py-2">Krunchy Chilli Fly</td>
+            <td class="border px-4 py-2">449</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2" colspan="3" style="text-align: center; font-weight: bold;">Value Burgs</td>
           </tr>
           <tr>
             <td class="border px-4 py-2">Crispy Chicken Cheese</td>
@@ -65,28 +97,8 @@
               <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
             </td>
           </tr>
-          
           <tr>
-            <td class="border px-4 py-2">Big Bang Theory</td>
-            <td class="border px-4 py-2">549</td>
-            <td class="border px-4 py-2">
-              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
-            </td>
-          </tr>
-          
-          <tr>
-            <td class="border px-4 py-2">Creamy Classico</td>
-            <td class="border px-4 py-2">549</td>
-            <td class="border px-4 py-2">
-              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
-            </td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2">Krunchy Chilli Fly</td>
-            <td class="border px-4 py-2">449</td>
-            <td class="border px-4 py-2">
-              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
-            </td>
+            <td class="border px-4 py-2" colspan="3" style="text-align: center; font-weight: bold;">Fries Additives</td>
           </tr>
           <tr>
             <td class="border px-4 py-2">Regular Fries</td>
@@ -124,6 +136,9 @@
             </td>
           </tr>
           <tr>
+            <td class="border px-4 py-2" colspan="3" style="text-align: center; font-weight: bold;">Dips & Drinks</td>
+          </tr>
+          <tr>
             <td class="border px-4 py-2">Chipotle Dip</td>
             <td class="border px-4 py-2">49</td>
             <td class="border px-4 py-2">
@@ -151,7 +166,7 @@
               <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
             </td>
           </tr>
-        <tr>
+          <tr>
             <td class="border px-4 py-2">Delivery Charges</td>
             <td class="border px-4 py-2"></td>
             <td class="border px-4 py-2">
@@ -159,7 +174,7 @@
             </td>
           </tr>
         </tbody>
-      </table> 
+      </table>  
 
       <button id="generateSlip" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Generate Order Slip</button>
     </div>
