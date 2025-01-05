@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Slip Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto py-8">
+    <h1 class="text-2xl font-bold text-center mb-4">Burger Corp. - Order Slip Generator</h1>
+
+    <div class="bg-white p-6 shadow-md rounded-lg">
+      <table class="table-auto w-full mb-4">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="px-4 py-2">Item</th>
+            <th class="px-4 py-2">Price</th>
+            <th class="px-4 py-2">Quantity</th>
+          </tr>
+        </thead>
+        <tbody id="itemsTable">
+          <tr>
+            <td class="border px-4 py-2">Double Story Cheese</td>
+            <td class="border px-4 py-2">499</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Korean Kracker</td>
+            <td class="border px-4 py-2">499</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Crispy Chicken Cheese</td>
+            <td class="border px-4 py-2">299</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="border px-4 py-2">FireCracker Cheese</td>
+            <td class="border px-4 py-2">299</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="border px-4 py-2">Jalapeno Chicken Cheese</td>
+            <td class="border px-4 py-2">299</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="border px-4 py-2">Dynamic Chicken Cheese</td>
+            <td class="border px-4 py-2">299</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="border px-4 py-2">Big Bang Theory</td>
+            <td class="border px-4 py-2">549</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="border px-4 py-2">Creamy Classico</td>
+            <td class="border px-4 py-2">549</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Krunchy Chilli Fly</td>
+            <td class="border px-4 py-2">449</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Regular Fries</td>
+            <td class="border px-4 py-2">149</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Large Pack</td>
+            <td class="border px-4 py-2">299</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Chipotle Fries</td>
+            <td class="border px-4 py-2">249</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Garlic Fries</td>
+            <td class="border px-4 py-2">249</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Pizza Fries</td>
+            <td class="border px-4 py-2">399</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Chipotle Dip</td>
+            <td class="border px-4 py-2">49</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Garlic Dip</td>
+            <td class="border px-4 py-2">49</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Cola Next</td>
+            <td class="border px-4 py-2">99</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">Fizz Up</td>
+            <td class="border px-4 py-2">99</td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button id="generateSlip" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Generate Order Slip</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <!-- <script src="script.js"></script> -->
+</body>
+<script>
+const { jsPDF } = window.jspdf;
+
+document.getElementById("generateSlip").addEventListener("click", () => {
+  const itemsTable = document.querySelectorAll("#itemsTable tr");
+  let pdf = new jsPDF();
+  let yPosition = 20;
+
+  // Add background image
+  const img = new Image();
+  img.src = './BurgerCorpTransparent.jpg'; // Replace with the path to your background image
+  img.onload = function() {
+    pdf.setGState(new pdf.GState({ opacity: 0.5 }));
+    pdf.addImage(img, 'JPEG', 50, 50, 100, 100); // Adjust the dimensions as needed
+    pdf.setGState(new pdf.GState({ opacity: 1 }));
+    // Add the PDF header
+    pdf.setFontSize(20);
+    pdf.setFont("helvetica", "bold");
+    pdf.text("Burger Corp.", 105, 10, { align: "center"});
+    pdf.setFontSize(12);
+    pdf.text("Item", 20, yPosition);
+    pdf.text("Price", 80, yPosition);
+    pdf.text("Quantity", 120, yPosition);
+    pdf.text("Total", 160, yPosition);
+    pdf.setFont("helvetica", "normal");
+
+    yPosition += 10; // Adjust Y position for the first row of data
+
+    let totalAmount = 0;
+
+    // Loop through each row of the table
+    itemsTable.forEach((row) => {
+      const item = row.cells[0].textContent;
+      const price = parseFloat(row.cells[1].textContent.replace("$", ""));
+      const quantity = parseInt(row.querySelector(".quantity").value) || 0;
+
+      if (quantity > 0) {
+        const total = price * quantity;
+        totalAmount += total;
+
+        // Add row data to the PDF
+        pdf.text(item, 20, yPosition);
+        pdf.text(`Rs${price.toFixed(2)}`, 80, yPosition);
+        pdf.text(quantity.toString(), 120, yPosition);
+        pdf.text(`Rs${total.toFixed(2)}`, 160, yPosition);
+
+        yPosition += 10; // Move to the next row
+      }
+    });
+
+    // Add total amount at the bottom
+    yPosition += 10;
+    pdf.setFontSize(14);
+    pdf.setFont("times", "bold");
+    pdf.text("Total Amount:", 120, yPosition);
+    pdf.text(`Rs. ${totalAmount.toFixed(2)}`, 160, yPosition);
+
+    // Add borders to the table
+    pdf.setLineWidth(0.5);
+    pdf.line(10, 15, 200, 15); // Top border
+    pdf.line(10, yPosition + 5, 200, yPosition + 5); // Bottom border
+    pdf.line(10, 15, 10, yPosition + 5); // Left border
+    pdf.line(200, 15, 200, yPosition + 5); // Right border
+
+    // Add closing comments
+    yPosition += 20;
+    pdf.setFontSize(12);
+    pdf.setFont("courier", "bold");
+    pdf.text("Thank you for ordering from Burger Corp!", 105, yPosition, { align: "center" });
+    yPosition += 10;
+    pdf.text("We hope you enjoy your meal!", 105, yPosition, { align: "center" });
+    yPosition += 10;
+    pdf.text("Visit us again for more delicious burgers!", 105, yPosition, { align: "center" });
+
+    // Save the PDF
+    pdf.save("order-slip.pdf");
+  };
+});
+
+
+</script>
+</html>
