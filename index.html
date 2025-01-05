@@ -173,7 +173,7 @@ document.getElementById("generateSlip").addEventListener("click", () => {
   const img = new Image();
   img.src = './BurgerCorpTransparent.jpg'; // Replace with the path to your background image
   img.onload = function() {
-    pdf.setGState(new pdf.GState({ opacity: 0.5 }));
+    pdf.setGState(new pdf.GState({ opacity: 0.4 }));
     pdf.addImage(img, 'JPEG', 50, 50, 100, 100); // Adjust the dimensions as needed
     pdf.setGState(new pdf.GState({ opacity: 1 }));
     // Add the PDF header
