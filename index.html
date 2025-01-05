@@ -151,8 +151,15 @@
               <input type="number" value="0" min="0" class="quantity border rounded w-full px-2 py-1">
             </td>
           </tr>
+        <tr>
+            <td class="border px-4 py-2">Delivery Charges</td>
+            <td class="border px-4 py-2"></td>
+            <td class="border px-4 py-2">
+              <input type="number" value="0" min="0" class="delivery-charges border rounded w-full px-2 py-1">
+            </td>
+          </tr>
         </tbody>
-      </table>
+      </table> 
 
       <button id="generateSlip" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Generate Order Slip</button>
     </div>
@@ -195,22 +202,30 @@ document.getElementById("generateSlip").addEventListener("click", () => {
     itemsTable.forEach((row) => {
       const item = row.cells[0].textContent;
       const price = parseFloat(row.cells[1].textContent.replace("$", ""));
-      const quantity = parseInt(row.querySelector(".quantity").value) || 0;
+      console.log(parseInt(row.querySelector(".quantity")).value);
+      if (row!=itemsTable[itemsTable.length-1]) {
+        const quantity = parseInt(row.querySelector(".quantity").value) || 0;
+        console.log(quantity)
 
-      if (quantity > 0) {
-        const total = price * quantity;
-        totalAmount += total;
+        if (quantity > 0) {
+          const total = price * quantity;
+          totalAmount += total;
 
-        // Add row data to the PDF
-        pdf.text(item, 20, yPosition);
-        pdf.text(`Rs${price.toFixed(2)}`, 80, yPosition);
-        pdf.text(quantity.toString(), 120, yPosition);
-        pdf.text(`Rs${total.toFixed(2)}`, 160, yPosition);
+          // Add row data to the PDF
+          pdf.text(item, 20, yPosition);
+          pdf.text(`Rs${price.toFixed(2)}`, 80, yPosition);
+          pdf.text(quantity.toString(), 120, yPosition);
+          pdf.text(`Rs${total.toFixed(2)}`, 160, yPosition);
 
-        yPosition += 10; // Move to the next row
+          yPosition += 10; // Move to the next row
+        }
       }
     });
-
+    // Add delivery charges
+    const deliveryCharges = parseFloat(document.querySelector(".delivery-charges").value) || 0;
+    totalAmount += deliveryCharges;
+    pdf.text("Delivery Charges", 20, yPosition);
+    pdf.text(`Rs${deliveryCharges}`, 160, yPosition);
     // Add total amount at the bottom
     yPosition += 10;
     pdf.setFontSize(14);
